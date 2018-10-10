@@ -335,11 +335,13 @@ $$42+18 = 60$$
 
 which is equal to the number of numbers, and it is the right answer.
 
-The simulation shortcut is shown in Figure 1.
+The simulation shortcut on MacOS is shown below.
 
-![Figure 1](https://ws3.sinaimg.cn/large/006tNbRwly1fw0rmudq2yj30tb0pn42r.jpg)
+![QTpim](https://ws3.sinaimg.cn/large/006tNbRwly1fw0rmudq2yj30tb0pn42r.jpg)
 
+The simulation shortcut on Windows is shown below.
 
+![PCSPim](https://ws2.sinaimg.cn/large/006tNbRwly1fw0z2ib1jfj31bs140ahp.jpg)
 
 
 
