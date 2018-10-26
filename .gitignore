@@ -2,3 +2,5 @@
 /softwares/
 /作业答案 4thEd-Solutions.Manual.Ch.1-7/
 /课本/
+*.vvp
+*.vcd
