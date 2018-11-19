@@ -125,7 +125,7 @@ We *assume branch not taken* and use dynamic branch prediction. We only change p
 
 ### 1. Input Program
 
-```ruby
+```c++
 memory[0] = 32'b00100000000010000000000000100000; //addi $t0, $zero, 0x20
 memory[1] = 32'b00100000000010010000000000100111; //addi $t1, $zero, 0x27
 memory[2] = 32'b00000001000010011000000000100100; //and $s0, $t0, $t1
