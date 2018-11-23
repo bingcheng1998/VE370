@@ -85,27 +85,7 @@ Our project follows the following pipelined processor schematic from the textboo
 
 ## III. Design of Components
 
-### i. Data tables
-
-<img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fxcbxx3dglj30ua0bywfy.jpg" width=420 />
-
-The following table shows the setting of the control lines for each instruction in our design.
-
-|        | Jump | ALUSrc | RegDst | ALUOp | MemWrite | MemRead | Branch | MemtoReg | RegWrite |
-| ------ | ---- | ------ | ------ | ----- | -------- | ------- | ------ | -------- | -------- |
-| R-type | 0    | 0      | 1      | 10    | 0        | 0       | 0      | 0        | 1        |
-| addi   | 0    | 1      | 0      | 00    | 0        | 0       | 0      | 0        | 1        |
-| andi   |      |        |        |       |          |         |        |          |          |
-| slt    |      |        |        |       |          |         |        |          |          |
-| beq    | 0    | 0      | 0      | 01    | 0        | 0       | 1      | 0        | 0        |
-| bne    |      |        |        |       |          |         |        |          |          |
-| lw     | 0    | 1      | 0      | 00    | 0        | 1       | 0      | 1        | 1        |
-| sw     | 0    | 1      | 0      | 00    | 1        | 0       | 0      | 0        | 0        |
-| j      | 1    | 0      | 0      | 00    | 0        | 0       | 0      | 0        | 0        |
-
-
-
-### ii. IF Stage
+### i. IF Stage
 
 #### 1. PC MUX
 
@@ -192,7 +172,7 @@ module instruction_memory (
 
 
 
-### iii. EX Stage
+### ii. EX Stage
 
 #### 1. Forwarding Unit and MUX 
 
@@ -373,7 +353,7 @@ For load word and store word instructions, ALU computes the memory address by ad
   `endif
 ```
 
-### iv. Memory Stage and Write Back Stage 
+### iii. Memory Stage and Write Back Stage 
 
 #### 1. Data Memory 
 
@@ -610,7 +590,7 @@ endmodule
 
 ### i. Data tables
 
-![img](https://ws1.sinaimg.cn/large/006tNbRwgy1fxcbxx3dglj30ua0bywfy.jpg)
+<img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fxcbxx3dglj30ua0bywfy.jpg" width=420 />
 
 The following table shows the setting of the control lines for each instruction in our design.
 
