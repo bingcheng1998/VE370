@@ -1,0 +1,30 @@
+
+*** Running vivado
+    with args -log Main_Unit.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main_Unit.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Main_Unit.tcl -notrace
+Command: synth_design -top Main_Unit -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8252 
+ERROR: [Synth 8-2715] syntax error near 18 [C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/clock_for_simulation.v:150]
+ERROR: [Synth 8-2715] syntax error near ) [C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/clock_for_simulation.v:150]
+ERROR: [Synth 8-993] n_Bit_counter is an unknown type [C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/clock_for_simulation.v:150]
+INFO: [Synth 8-2350] module clock_divider_500HZ ignored due to previous errors [C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/clock_for_simulation.v:143]
+INFO: [Synth 8-2350] module clock_divider_1HZ ignored due to previous errors [C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/clock_for_simulation.v:164]
+INFO: [Synth 8-2350] module timer ignored due to previous errors [C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/clock_for_simulation.v:186]
+INFO: [Synth 8-2350] module SSDDriver ignored due to previous errors [C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/clock_for_simulation.v:233]
+Failed to read verilog 'C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/clock_for_simulation.v'
+INFO: [Common 17-83] Releasing license: Synthesis
+6 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 22 19:52:52 2018...

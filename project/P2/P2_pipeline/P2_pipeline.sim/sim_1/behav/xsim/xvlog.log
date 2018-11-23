@@ -1,0 +1,34 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/ALU_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/data_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/forwarding_unit_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Forward
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/instruction_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instruction_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/pc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_Reg
+INFO: [VRFC 10-311] analyzing module ID_EX_Reg
+INFO: [VRFC 10-311] analyzing module EX_MEM_Reg
+INFO: [VRFC 10-311] analyzing module MEM_WB_Reg
+INFO: [VRFC 10-311] analyzing module Mux_N_bit
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-311] analyzing module sign_extension
+INFO: [VRFC 10-311] analyzing module Pipeline
+INFO: [VRFC 10-2458] undeclared symbol pc_wirte, assumed default net type wire [C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/pipeline.v:129]
+WARNING: [VRFC 10-756] identifier PC_out_IF is used before its declaration [C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/pipeline.v:24]
+INFO: [VRFC 10-311] analyzing module Mux_32bit_3to1
+INFO: [VRFC 10-311] analyzing module HazardDetection
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/register.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/sign_extension.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/state_register.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/Pipeline/pipe_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/P2_pipeline/P2_pipeline.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

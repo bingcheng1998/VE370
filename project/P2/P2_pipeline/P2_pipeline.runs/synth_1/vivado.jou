@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Nov 22 19:52:39 2018
+# Process ID: 16564
+# Current directory: C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/P2_pipeline/P2_pipeline.runs/synth_1
+# Command line: vivado.exe -log Main_Unit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main_Unit.tcl
+# Log file: C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/P2_pipeline/P2_pipeline.runs/synth_1/Main_Unit.vds
+# Journal file: C:/Users/72774/Documents/JITRAVELLING/Fall2018/VE370/VE370_Project/Project_Two/P2_pipeline/P2_pipeline.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Main_Unit.tcl -notrace
