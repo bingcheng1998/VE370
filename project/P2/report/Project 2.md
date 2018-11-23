@@ -655,11 +655,11 @@ In this project, a MIPS single-cycle processor and a MIPS pipelined processor ar
 Throughout the implementation process, some unexpected events occurred and time were spent on debugging the modules. The events can be divided into two categories. The following discusses the reasons that led to the events.
 
 1. Simulation errors in Verilog HDL
-   - For the implementation of the ‘and’ instruction in the ALU module, logical AND ‘&&’ should be used rather than bitwise AND ‘&’. Using bitwise AND will lead to problematic results. They are two different logical operations. 
+   - For the implementation of the `and` instruction in the ALU module, logical AND ‘&&’ should be used rather than bitwise AND ‘&’. Using bitwise AND will lead to problematic results. They are two different logical operations. 
    - In the single cycle processor, due to the rising edge in the first clock cycle, if the first instruction is ‘lw’, error would occur. Therefore, the program counter starts from ‘-4’ instead of ‘0’.
-   - When coding the main processor module, where a large number of wires are connected to run the program, the naming of wires was not paid attention to. This led to error in wire connections. The reason is that Verilog is a case-sensitive language. For example, ‘WireReg’  and ‘wireReg’ actually refer to different wires, resulting in the error.
+   - When coding the main processor module, where a large number of wires are connected to run the program, the naming of wires was not paid attention to. This led to error in wire connections. The reason is that Verilog is a case-sensitive language. For example, `WireReg`  and `wireReg` actually refer to different wires, resulting in the error.
    - The naming of the pipeline register wasn’t consistent for different components, some represented the output of a pipeline and some were the input of a pipeline. It led to some errors when simulating the processor too.
-   - Besides, during the debug process, we learned that the ‘assign’ statement used for continuous assignment in Verilog can only drive a value to a net but it cannot assign a value to a register.
+   - Besides, during the debug process, we learned that the `assign` statement used for continuous assignment in Verilog can only drive a value to a net but it cannot assign a value to a register.
 2. Unexpected results on FPGA board
    - Because the events in Verilog mostly happen at ‘posedge Clock’ or ‘negedge Clock’, when the switch spends more than half a clock cycle time in between the ‘on’ and ‘off’ position, the program counter will not be determined and hence leads to varying random numbers.
 
