@@ -55,13 +55,13 @@
 
 ### Introduction
 
-Aiming at enhancing our understanding of how the central processing unit (CPU) works, this project invites us to build a MIPS single-cycle processor and a MIPS pipelined processor using Verilog. 
+To enhance our understanding of how central processing units (CPUs) work, the project invites us to build MIPS single-cycle processors and MIPS pipeline processors using Verilog.
 
-The single-cycle implementation executes all instructions in one clock cycle. This means that no datapath resource can be used more than once per instruction, so any element needed more than once must be duplicated. Therefore, a memory for instructions is separated from one for data. Although some of the functional units will need to be duplicated, many of the elements can be shared by different instruction flows. In order to share a datapath element between two or more different instruction classes, multiple connections to the input of an element are allowed, and multiplexors and control signals are designed carefully to select among the multiple inputs.
+A single cycle implementation executes all instructions in one clock cycle. This means that each instruction cannot use the data path resource multiple times, so you must copy any elements you need multiple times. Therefore, the memory of the instruction is separated from the memory of the data. Although some functional units need to be copied, many elements can be shared by different instruction streams. To share data path elements between two or more different instruction classes, multiple connections to element inputs are allowed, and multiplexers and control signals are carefully designed to select among multiple inputs.
 
-However, the single-cycle implementation has an unsatisfactory performance due to its inefficiency; the execution time of each instruction is one clock cycle, which is determined by the longest possible path in the processor. Using the same hardware components, the pipelined implementation allows different functional units of a system to run concurrently. As a result, pipelining technique significantly reduces the execution time of a same program compared to the single-cycle implementation. 
+However, single-cycle implementations are unsatisfactory due to their low efficiency; the execution time of each instruction is one clock cycle, determined by the longest possible path in the processor. Using the same hardware components, the pipeline implementation allows different functional units of the system to run simultaneously. As a result, pipeline technology significantly reduces the execution time of the same program compared to single-cycle implementations.
 
-In order to prevent data hazards in the pipeline and minimize the delay created by stalls, a forwarding unit and a hazard detection unit are implemented. The forwarding technique retrieves the missing data element from internal buffers rather than waiting for it to arrive from programmer-visible registers or memory. The hazard detection unit operates during the ID stage so that it can insert the stall between the load and its use; in this case, stalling is inevitable. For control hazards that might occur during the operation of jumping instructions, we assume branch is not taken and stall if the assumption is not correct during the ID stage via the hazard detection unit.  For the case when there is a load before a branch, unfortunately, as stated before, stalls are added so that the word is successfully written in the instruction memory.
+In order to prevent data danger in the pipeline and minimize the delay caused by the pause, the forwarding unit and the danger detection unit are realized. Forwarding techniques retrieve lost data elements from internal buffers instead of waiting for them to arrive from registers or memory visible to the programmer. The hazard detection unit operates during the ID phase so that it can insert a stall between the load and its use; in this case, stall is unavoidable. For the control hazard that may occur during the jump command operation, we assume that if the assumption of passing the hazard detection unit during the ID phase is incorrect, no branch is taken and stopped. For the case where there is a load before the branch, unfortunately, as mentioned before, a pause is added to successfully write the word into the instruction memory.
 
 ## II. Circuit Design
 
@@ -600,14 +600,9 @@ The following table shows the setting of the control lines for each instruction 
 
 ## VIII. SSD and Top Module 
 
-The Basys 3 board contains a four-digit common anode SSD. The anodes of the seven LEDs forming each
-digit are tied together into one “common anode” circuit node, but the LED cathodes remain separate. The
-common anode signals are available as four “digit enable” input signals to the 4-digit display. The cathodes of
-similar segments on all four displays are connected into seven circuit nodes labeled CA through CG (so, for
-example, the four d cathodes from the four digits are grouped together into a single circuit node called “CD”).
-These seven cathode signals are available as inputs to the 4-digit display. This signal connection scheme makes
-the cathode signals common to all digits but they can only illuminate the segments of a digit whose
-corresponding anode signal is asserted.
+The Basys 3 board contains a four-digit common anode SSD. The anodes of the seven LEDs forming each digit are tied together into one “common anode” circuit node, but the LED cathodes remain separate. The common anode signals are available as four “digit enable” input signals to the 4-digit display. The cathodes of similar segments on all four displays are connected into seven circuit nodes labeled CA through CG (so, for example, the four d cathodes from the four digits are grouped together into a single circuit node called “CD”).
+
+These seven cathode signals are available as inputs to the 4-digit display. This signal connection scheme makes the cathode signals common to all digits but they can only illuminate the segments of a digit whose corresponding anode signal is asserted.
 
 <img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fxi1kzf29kj30l00jsaba.jpg" width=420 />
 
@@ -655,13 +650,13 @@ In this project, a MIPS single-cycle processor and a MIPS pipelined processor ar
 Throughout the implementation process, some unexpected events occurred and time were spent on debugging the modules. The events can be divided into two categories. The following discusses the reasons that led to the events.
 
 1. Simulation errors in Verilog HDL
-   - For the implementation of the `and` instruction in the ALU module, logical AND ‘&&’ should be used rather than bitwise AND ‘&’. Using bitwise AND will lead to problematic results. They are two different logical operations. 
-   - In the single cycle processor, due to the rising edge in the first clock cycle, if the first instruction is ‘lw’, error would occur. Therefore, the program counter starts from ‘-4’ instead of ‘0’.
+   - For the implementation of the `and` instruction in the ALU module, logical AND `&&` should be used rather than bitwise AND `&`. Using bitwise AND will lead to problematic results. They are two different logical operations. 
+   - In the single cycle processor, due to the rising edge in the first clock cycle, if the first instruction is `lw`, error would occur. Therefore, the program counter starts from `-4` instead of `0`.
    - When coding the main processor module, where a large number of wires are connected to run the program, the naming of wires was not paid attention to. This led to error in wire connections. The reason is that Verilog is a case-sensitive language. For example, `WireReg`  and `wireReg` actually refer to different wires, resulting in the error.
    - The naming of the pipeline register wasn’t consistent for different components, some represented the output of a pipeline and some were the input of a pipeline. It led to some errors when simulating the processor too.
    - Besides, during the debug process, we learned that the `assign` statement used for continuous assignment in Verilog can only drive a value to a net but it cannot assign a value to a register.
 2. Unexpected results on FPGA board
-   - Because the events in Verilog mostly happen at ‘posedge Clock’ or ‘negedge Clock’, when the switch spends more than half a clock cycle time in between the ‘on’ and ‘off’ position, the program counter will not be determined and hence leads to varying random numbers.
+   - Because the events in Verilog mostly happen at `posedge Clock` or `negedge Clock`, when the switch spends more than half a clock cycle time in between the `on` and `off` position, the program counter will not be determined and hence leads to varying random numbers.
 
 By accomplishing the project, our understanding of how the central processing unit (CPU) works is deepened through practice.  The mechanisms of forwarding and flushing in order to prevent hazards are carefully comprehended during the design process. While theoretical knowledge is the foundation, as programmers, the use of programming language has a series of rules and conventions to follow. Especially for naming, the habit of consistency is important and will save a lot of time in the debug process, no matter what programming project we work on in the future.
 
