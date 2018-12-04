@@ -150,6 +150,6 @@ The projects are designed for students to practice basic understanding of the pi
 | Project 3*                      | 3%   |
 | Total                           | 100% |
 
-*Individual assignments **Group assignments 
+*Individual assignments* Group assignments 
 
 Note: final letter grades will be curved. 
