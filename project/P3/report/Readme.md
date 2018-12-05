@@ -45,6 +45,7 @@
 
 Artificial intelligence is an area of computer science, it has its own application in almost all fields of science and technology. Since the fast learning algorithm of artificial neural network was proposed in 2006, the deep learning technology has aroused more and more research interest because it overcomes the inherent defect of the traditional algorithm which relies on the artificial design features. Artificial neural network method is also found to be suitable for big data analysis, and has been successfully applied to computer vision, speech recognition, playing board games and predicting the results of Dota2 games. In this paper, we discuss the structures of some widely used artificial neural networks and their practical applications. 
 In this paper, the biological model and mathematical model of neurons are compared, and three kinds of neural network structures are proposed: restricted Boltzmann machine structure, deep belief network structure and deep convolution neural network structure. Finally, a clear reason is given, and the future research topics are listed. 
+
 **Keywords**: convolution neural network, deep learning, artificial neural network (ANN)
 
 ## 1 Introduction￼￼
@@ -85,7 +86,7 @@ For example, if we know that the data conform to the Gao Si distribution, we can
 
 ### 2.3 Architectures: Deep Belief Network
 
-In 2006, Geoffrey Hinton, the father of neural network, gave birth to the artifact, solved the training problem of deep neural network in one stroke, promoted the rapid development of deep learning, and created a new situation of artificial intelligence. In recent years, a lot of intelligent products have emerged in the field of science and technology, which has deeply affected everyone's life. And what is this artifact? That's the Deep Faith Network (Deep Belief Network, or DBN) [14]. 
+In 2006, Geoffrey Hinton, the father of neural network, gave birth to the artifact, solved the training problem of deep neural network in one stroke, promoted the rapid development of deep learning, and created a new situation of artificial intelligence. In recent years, a lot of intelligent products have emerged in the field of science and technology, which has deeply affected everyone's life. And what is this artifact? That's the Deep Belief Network (DBN) [12]. 
 
 Deep belief network (DBN) solves the optimization problem of deep-level neural network by layer-by-layer training, and gives better initial weights to the whole network by layer-by-layer training. As long as the network can be fine-tuned to achieve the optimal solution.
 
@@ -152,9 +153,11 @@ The study of speech recognition is a long and difficult process. Its development
 
 The cumulative probability consists of three parts [11], namely: 
 
-Viewing probability: probability per frame and per statu. 
-Transition probability: the probability that each state moves to itself or to the next state. 
-Language probability: probability derived from the laws of language statistics. 
+- Viewing probability: probability per frame and per statu. 
+
+- Transition probability: the probability that each state moves to itself or to the next state. 
+
+- Language probability: probability derived from the laws of language statistics. 
 
 Among them, the first two probabilities are obtained from the acoustic model, and the last probability is obtained from the language model. Language models are trained from a large number of texts, which can use the statistical laws of a language itself to help improve the accuracy of recognition. Language model is very important, if the language model is not used, when the state network is large, the result of recognition is basically a mess [11].
 
@@ -200,7 +203,7 @@ Every ANN was trained for 5000 epochs using the training data. After each step o
 
 The results show that all models have a prediction rate above 50%. The average accuracy for the models ranges between 53.44% and 59.54%.
 
-##  4 Topics for future research
+##  4 Future topics
 
 ### 4.1 Design a depth model to learn from less training data
 
@@ -257,6 +260,4 @@ In 2016, Google artificial Intelligence "AlphaGo" and South Korea's professional
 [12] Kaplan, E. (1999). U.S. Patent No. 5,927,714. Washington, DC: U.S. Patent and Trademark Office.
 
 [13] Kendall, A., & Gal, Y. (2017). What uncertainties do we need in bayesian deep learning for computer vision?. In Advances in neural information processing systems (pp. 5574-5584).
-
-[14] Yu, D., & Deng, L. (2011). Deep learning and its applications to signal and information processing [exploratory dsp]. IEEE Signal Processing Magazine, 28(1), 145-154.
 
