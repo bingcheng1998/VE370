@@ -30,7 +30,11 @@ According to the student handbook (2015 version),
 
 ---
 
+## Research Project
 
+You can read sample project [here](https://bingcheng1998.github.io/PDF/Deep-Neural%20Network-and-Its-Applications/Deep-Neural%20Network-and-Its-Applications.html).
+
+---
 
 # Ve370 Introduction to Computer Organization Fall 2018 
 
