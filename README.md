@@ -12,6 +12,26 @@ According to the student handbook (2015 version),
 
 ------
 
+## Slides
+
+![image-20181214164837916](https://ws2.sinaimg.cn/large/006tNbRwly1fy6de85papj315y0iwjva.jpg)
+
+---
+
+## Books
+
+![image-20181214164930340](https://ws4.sinaimg.cn/large/006tNbRwly1fy6df0hm3aj317y06cwim.jpg)
+
+---
+
+## Handwritten notes
+
+![image-20181214165009245](https://ws3.sinaimg.cn/large/006tNbRwly1fy6dfpccgjj31d60bmteo.jpg)
+
+---
+
+
+
 # Ve370 Introduction to Computer Organization Fall 2018 
 
 Gang Zheng, Ph.D.
